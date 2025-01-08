@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0b0808;
+    color: white;
+    font-size: 50px;
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block; /* Use inline-block for multi-column layout */
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.search-cart {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 5px;
+}
+
+.cart-icon img {
+    height: 30px; /* Adjust as needed */
+}
+
+main {
+    display: flex; /* Flexbox for main layout */
+}
+
+/* Sidebar Filters */
+.filters {
+    width: 25%; /* Width of the filter sidebar on desktop */
+    padding: 20px;
+}
+
+/* Product List */
+.product-list {
+    flex-grow: 1; /* Take remaining space */
+    padding: 20px;
+    display: grid; /* Use grid for product layout */
+    grid-template-columns: repeat(4, 1fr); /* Default to 4 products per row on desktop */
+    gap: 20px; /* Space between items */
+}
+
+/* Product Item Styles */
+.product-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%; /* Responsive image */
+}
+
+/* Mobile Dropdown for Filters */
+.mobile-filters {
+    display: none; /* Hidden by default */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) { /* Tablet view */
+   .product-list {
+       grid-template-columns: repeat(2, 1fr); /* Two products per row on tablet */
+   }
+}
+
+@media (max-width: 768px) { /* Mobile view */
+   .filters {
+       display: none; /* Hide sidebar on mobile */
+   }
+   
+   .mobile-filters {
+       display: block; /* Show dropdown on mobile */
+       margin-top: 20px; /* Space from header */
+       width: calc(100% - 40px); /* Full width with padding */
+       margin-left: auto; 
+       margin-right: auto; 
+       padding: 10px; 
+       background-color: #f0f0f0; 
+       border-radius: 5px; 
+       border-color:#ccc; 
+   }
+
+   .product-list {
+       grid-template-columns: repeat(1, 1fr); /* One product per row on mobile */
+   }
+}
+footer{
+    text-align: center;
+    background-color: #333;
+    color: white;
+}

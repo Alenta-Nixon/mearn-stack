@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block; /* Use inline-block for multi-column layout */
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.search-cart {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 5px;
+}
+
+.cart-icon {
+    color: white; /* Icon color */
+    font-size: 24px; /* Icon size */
+}
+
+.filter-bar {
+    position: sticky; /* Sticky filter bar */
+    top: 0; /* Stick to top */
+    background-color: #f8f8f8; /* Background color */
+    padding: 10px; /* Padding */
+}
+
+.product-list {
+    display: grid; /* Use grid for product layout */
+    grid-template-columns: repeat(4, 1fr); /* Default to 4 products per row on desktop */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+}
+
+/* Product Item Styles */
+.product-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.product-image-container {
+    position: relative; /* Position relative for overlay effect */
+}
+
+.product-image-container img {
+    width: 100%; /* Responsive image */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.product-image-container:hover img {
+    transform: scale(1.1); /* Zoom in effect on hover */
+}
+
+.overlay {
+    position: absolute; /* Overlay positioning */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* Text color */
+    opacity: 0; /* Hidden by default */
+    display: flex; /* Center overlay content */
+    justify-content: center; 
+    align-items: center; 
+}
+
+.product-image-container:hover .overlay {
+   opacity: 1; /* Show overlay on hover */
+   transition: opacity 0.3s ease; /* Smooth transition for overlay */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) { /* Tablet view */
+   .product-list {
+       grid-template-columns: repeat(2, 1fr); /* Two products per row on tablet */
+   }
+}
+
+@media (max-width: 768px) { /* Mobile view */
+   .product-list {
+       grid-template-columns: repeat(1, 1fr); /* One product per row on mobile */
+   }
+}
+footer{
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
