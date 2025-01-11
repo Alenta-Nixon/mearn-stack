@@ -1,0 +1,64 @@
+/* src/components/home.css */
+
+.homepage {
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background for contrast */
+}
+
+.homepage-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #921319; /* Darker text color for better readability */
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 60px; 
+}
+
+.product-card {
+    background-color: white; /* White background for product cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.product-image {
+    max-width: 150px;
+    height: 200px;
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.product-name {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.product-price {
+    font-size: 1.25em;
+    color: #007bff; /* Bootstrap primary color for prices */
+}
+
+.view-details {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.view-details:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
