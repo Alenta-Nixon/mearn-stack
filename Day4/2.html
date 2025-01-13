@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: black;
+            margin: 0 auto;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+    <div class="button-container">
+        <input type="button" value="on"  id="on">
+        <input type="button" value="off" id="off">
+    </div>
+    <script>
+        var a = document.querySelector("#on");
+        var b = document.querySelector("#off");
+        var circle = document.querySelector(".circle");
+        window.onload = function() {
+            a.addEventListener("click", function() {
+                circle.style.backgroundColor = "yellow";
+            });
+            b.addEventListener("click", function() {
+                circle.style.backgroundColor = "black";
+            });
+        }
+    </script>
+</body>
+</html>
